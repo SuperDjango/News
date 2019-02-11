@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant|Merriweather|UnifrakturMaguntia" rel="stylesheet">
+  <title>Telecom industry news and analytics</title>
+  <style>
+    hr {
+     border: none; /* Убираем границу */
+     background-color: black; /* Цвет линии */
+     color: black; /* Цвет линии для IE6-7 */
+     height: 2px; /* Толщина линии */
+      }
+    p {
+      text-indent: 20; /* Отступ первой строки в пикселах */
+      }
+    td{
+    border-bottom: 1px solid black; /* Линия снизу */
+      }
+    header {
+      }
+    body {
+      style="font-family: 'Merriweather', serif;
+      font-weight: bold;
+    }
+  </style>
+
+  {% load staticfiles %}
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+ </head>
+ <body>
+   <br>
+   <center> <div id="header" style="font-family: 'UnifrakturMaguntia', cursive;font-size: 350%; text-shadow: 4px 4px 4px #aaa" > Telecom News and Analytics </div>
+   <img height="200" width="800" src="{% static 'telecomNews/top.png'%}"> </center>
+
+{% block content %}
+{% endblock %}
+
+ </body>
+</html>

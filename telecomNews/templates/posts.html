@@ -1,0 +1,10 @@
+{% extends "telecomNews/wrapper.html"%}
+
+{% block content %}
+  {% for post in object_list %}
+    <a href="{{post.id}}"> <h3> {{post.title}} </h3></a>
+    <img height="150" width="300" src="{{MEDIA_URL}}/{{post.image}}">
+    <h4> {{post.shortPost}}</h4>
+    <h5>{{post.date|date:"d-m-Y"}}</h5>
+  {% endfor %}
+{% endblock %}

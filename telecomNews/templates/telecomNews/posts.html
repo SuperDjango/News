@@ -1,0 +1,20 @@
+{% extends "telecomNews/wrapper.html"%}
+
+{% block content %}
+<hr align= "center" width="900">
+<table  align= "center" width="900" border="0">
+  <tbody>
+  {% for post in object_list %}
+  <tr>
+    <td>
+      <a href="{{post.id}}"> <div id="body" style="font-weight: 900; color: black; font-family: 'Merriweather';serif"> <h5> {{post.title}} </h5> </div> </a>
+      <div id="body" style="font-weight: 900; color: black; font-family: 'Cormorant';cursive"> <h5> <p>{{post.shortPost}} </p> </h5> </div>
+      <div id="body" style="font-weight: 600; color: gray; font-family: 'Cormorant';cursive"><h6>{{post.date|date:"d-m-Y"}}</h6><br>
+    </td>
+    <td>
+      <img height="auto" width="350" src="{{MEDIA_URL}}/{{post.image}}">
+    </td>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

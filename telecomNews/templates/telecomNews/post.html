@@ -1,0 +1,16 @@
+{% extends "telecomNews/wrapper.html"%}
+
+{% block content %}
+<hr align= "center" width="800">
+<table  align= "center" width="600" border="0">
+  <tbody>
+    <tr>
+      <td>
+        <h2 class="text-info">{{articles.title}}</h2>
+        <h6 align= "right" class="text-info">POSTED: {{articles.date|date:"d-m-Y in H:i"}}</h6>
+        <img height="auto" width="600" src= "{{MEDIA_URL}}/{{articles.image}}">
+        <p>{{articles.post|safe|linebreaks}}</p>
+      </td>
+  </tbody>
+{% endblock %}
+    <h5>{{post.date|date:"d-m-Y"}}</h5>
